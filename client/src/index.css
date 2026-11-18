@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  --font-display: 'Barlow Condensed', system-ui, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #12110f;
+  font-family: var(--font-sans);
+  overscroll-behavior: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.touch-none-canvas {
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Colorblind correction filters applied only to the WebGL viewport container */
+.cb-protanopia {
+  filter: sepia(0.18) saturate(1.15) hue-rotate(-14deg);
+}
+
+.cb-deuteranopia {
+  filter: sepia(0.14) saturate(1.12) hue-rotate(12deg);
+}
+
+.cb-tritanopia {
+  filter: contrast(1.06) saturate(1.08) hue-rotate(-32deg);
+}
+
+/* Custom sleek range slider for dark tactical UI */
+input[type='range'].ash-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: rgba(237, 231, 218, 0.14);
+  border-radius: 3px;
+  outline: none;
+}
+
+input[type='range'].ash-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  background: #d48c2e;
+  border: 1px solid #f4dfb6;
+  cursor: pointer;
+}
+
+input[type='range'].ash-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  background: #d48c2e;
+  border: 1px solid #f4dfb6;
+  cursor: pointer;
+}
